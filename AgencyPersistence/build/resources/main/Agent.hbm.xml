@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="agency.model.entities.Agent"
+           table="AGENT">
+        <id name="id" column="AGENT_ID">
+            <generator class="increment"/>
+        </id>
+        <property
+                name="user"
+                column="AGENT_USER"/>
+        <property
+                name="password"
+                column="AGENT_PASSWORD"/>
+        <property
+                name="name"
+                column="AGENT_NAME"/>
+    </class>
+</hibernate-mapping>
