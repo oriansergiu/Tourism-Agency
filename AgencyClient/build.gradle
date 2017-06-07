@@ -1,0 +1,40 @@
+group 'ProjectMPP_I1Java'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+dependencies {
+//    //runtime group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
+//    //testCompile group: 'junit', name: 'junit', version: '4.11'
+//    compile 'org.springframework:spring-context:4.3.7.RELEASE'
+//    compile('org.springframework:spring-jms:2.5')
+//
+//    compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.14.5'
+//
+
+    compile project (':AgencyModel')
+    compile project (':AgencyServices')
+    compile project (':AgencyNetwork')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.8.1'
+
+    compile "org.springframework:spring-context:$springVersion"
+    compile "org.springframework:spring-jms:$springVersion"
+    compile "org.apache.activemq:activemq-spring:$activeMQVersion"
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.8.1'
+
+
+}
