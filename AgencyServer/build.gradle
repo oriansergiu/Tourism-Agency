@@ -1,0 +1,26 @@
+group 'ProjectMPP_I1Java'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //compile('org.springframework:spring-jms:2.5')
+
+    //compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.14.5'
+
+    //compile 'commons-logging:commons-logging:1.2'
+    runtime group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
+    compile project (':AgencyModel')
+    compile project (':AgencyServices')
+    compile project (':AgencyPersistence')
+    compile project (':AgencyNetwork')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
